@@ -1,0 +1,314 @@
+body{
+    font-family:"Tahoma";
+    background-color: #080032;
+}
+.rmIta{
+    font-style: normal;
+}
+.sec1{
+    background-color:#8ef2f7;
+    color:#000000;
+    text-align:left;
+    padding:20px;
+    margin: 20px;
+    border: 2px solid #5630ff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px rgba(186, 175, 255, 0.492); /* X, Y, blur, spread, color */
+}
+.sec2{
+    background-color:#c7ecee;
+    color:#000000;
+    text-align:left;
+    padding:20px;
+    margin: 20px;
+    border: 2px solid #5630ff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px rgba(159, 155, 186, 0.492); /* X, Y, blur, spread, color */
+}
+.alg1{
+    text-align:center;
+}
+
+.mention{
+    text-align: center;
+    font-style: italic;
+    color: #d35400;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Centers images horizontally */
+    align-items: center;  /* Aligns images vertically */
+    gap: 20px;  /* Adds spacing between images */
+    padding: 10px;
+}
+
+.image-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px;  /* Fixed width for image container */
+    
+}
+
+.image-container img {
+    width: 100%;  /* Makes image fill the container */
+    height: 100%;  /* Maintains aspect ratio */
+    max-width: 200px;  /* Ensures images do not stretch too much */
+    max-height: 400px;
+    object-fit: cover;  /* Ensures images fit without distortion */
+    border: 2px solid #333;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 10px 4px 20px rgba(193, 123, 231, 0.5); /* X, Y, blur, spread, color */
+}
+
+.caption {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 2px;
+    text-align: center;
+}
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+.modal-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.modal-content pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    background: #000;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+/* Hidden ASCII text */
+.ascii-hidden {
+    display: none;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Centers images horizontally */
+    align-items: center;  /* Aligns images vertically */
+    gap: 20px;  /* Adds spacing between images */
+    padding: 10px;
+}
+.video-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;  /* Fixed width for image container */
+    background-color: #ffffff;
+    
+}
+.video-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* width: auto;
+    border-radius: 10px; */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.video-comp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 20%;  /* Fixed width for image container */
+    background-color: #ffffff;
+    
+}
+.video-box div{
+    width: 100%;
+    border-radius: 10px;
+    padding: 2px;
+}
+video {
+    width: 100%;
+    border-radius: 5px;
+}
+.vidmodal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.vidmodal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+}
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+header{
+    background-color:#080064;
+    color:#ffffff;
+    text-align:center;
+    padding:30px;
+    letter-spacing:2pt;
+    font-size:17px;
+    clear:both;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+}
+footer{
+    background-color:#130f40;
+    color:#ffffff;
+    text-align:right;
+    padding:20px;
+    clear: both;
+}
+h1{
+    color:#ff0000; 
+    font-size:40px;
+}
+h1 span{
+    color: #ffffff;
+}
+h2{
+    /* font-family:"Franklin Gothic Demi Cond"!important; */
+    /* font-weight: 400; */
+    font-size: 30px;
+    text-align:center;
+}
+.a1{
+    color:#bfff00;
+    text-decoration:none;
+    letter-spacing:2pt;
+    font-size:17px;
+}
+.p1{
+    text-align:right;
+}
+.p1 a{
+    color:#000000; 
+    text-decoration: none; 
+    background-color:#999999;
+    color:#ffffff; 
+    padding:5px;
+    border-radius:5px;
+}
+.art1{
+    /* float:center; */
+    text-align: center;
+    /* width:100%; */
+}
+/*.art2{float:left; width: 100%;}*/
+/* aside{
+    float:right; 
+    width: 18%; 
+    background-color:#527e4b;
+    padding:8px;
+    font-size:20px;
+    color:#ffffff; 
+    font-family:"Aharoni";
+} */
+img{
+    width:100%; 
+    height:auto;
+}
+h3{
+    font-weight:none;
+    color:#7a45e5;
+    /* font-size:30px; */
+}
+.f1{
+    background-color:#3333ff;
+    letter-spacing:2px;
+    font-family:"Tahoma";
+    padding:17px;
+    line-height:4px;
+}
+.t1{
+    padding:8px;
+    width:100%;
+}
+.t2{
+    width:10%;
+    color:#d9d9d9;
+    font-weight:bold;
+}
+.i10{
+    width:70%;
+    height:35px;
+    padding:10px;
+    border-radius:4px;
+    border:none;
+}
+.i2{
+    width:65%;
+    height:80px;
+    padding:10px;
+    border-radius:4px;
+    border:none;
+}
+.s1{
+    font-size:20px;
+    letter-spacing:4px;
+    color:#99ccff;
+    background-color:#000099;
+    border-radius:8px;
+    padding:10px;
+    align:center;
+    font-weight:bold;
+    width:130px;
+    height:40px;
+    border:none;
+}
+
+article section p,h3{
+    padding-left: 100px;
+    padding-right: 100px;
+}
