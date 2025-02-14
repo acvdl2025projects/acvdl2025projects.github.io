@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ASCII Art Showcase</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Section Styling */
+    .section {
+      background-color: #fff;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery figure {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .gallery img,
+    .gallery video {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Download Link Styling */
+    .download-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #008CBA;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-link:hover {
+      background-color: #005f7a;
+    }
+    
+
+  .section {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  video {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  figcaption {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .download-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .download-link:hover {
+    background-color: #0056b3;
+  }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ASCII Art Showcase</h1>
+    <p>Sushovan Pan, ID - B2330054</p>
+  </header>
+
+  <main>
+    <!-- Simple ASCII Art Generator Section -->
+    <section class="section">
+      <h2>Simple ASCII Art Generator (Using Patch Averaging)</h2>
+      <!-- Placeholder for a brief introduction or explanation about this section -->
+      <p>
+        <!-- Write something about your patch averaging method here:
+             E.g., "This section demonstrates how images are converted into ASCII art 
+             by averaging pixel values within small patches..." -->
+      </p>
+
+      <div class="gallery">
+		<figure style="display: inline-block; width: 100%;">
+  		<img src="ds/test.png" alt="Original Image" style="vertical-align: middle;">
+  		<figcaption style="display: inline;">Original Image</figcaption>
+	</figure>
+
+        <figure>
+          <img src="first/cvoutput10.png" alt="10-level ASCII Art">
+          <figcaption>10-level ASCII Art</figcaption>
+          <a class="download-link" href="first/cv2_patch_averaging10.ipynb" download>Download Code</a>
+          
+        </figure>
+        <figure>
+          <img src="first/cvoutput70.png" alt="70-level ASCII Art">
+          <figcaption>70-level ASCII Art</figcaption>
+          <a class="download-link" href="first/cv2_patch_averaging10.ipynb" download>Download Code</a>
+        </figure>
+	<p>this 10 and 70 levels of ascii art are created only using cv.resize function,first we convert the image into greyscale, we then take intended(resize size, 	for here the column value is 80) size,and resize that after that we take pixel colour value and based on its colour value(0-255) assign it to a charecter.</p>
+        
+        
+        <figure>
+          <img src="first/myoutput10.png" alt="10-level ASCII Art (My Output)">
+          <figcaption>10-level ASCII Art (My Output)</figcaption>
+          <a class="download-link" href="first/my_patch_averaging10.ipynb" download>Download Code</a>
+        </figure>
+
+        <figure>
+          <img src="first/myoutput70.png" alt="70-level ASCII Art (My Output)">
+          <figcaption>70-level ASCII Art (My Output)</figcaption>
+          <a class="download-link" href="first/my_patch_averaging0.ipynb" download>Download Code</a>
+        </figure>
+        <p>this 10 and 70 levels of ascii art are created using cv.resize function and patch extraction method ,first we convert the image into greyscale, we then resize to a patch extractable size, so we can easily get 80 column value, and also no point patch, and the aspect ratio are as close as possible, then we take each patch and find its averave colour value and based on its colour value(0-255) assign it to a charecter(for both 10 and 70 levels).</p>
+      </div>
+    </section>
+
+    <!-- Data Science-based ASCII Art Generator Section -->
+    <section class="section">
+      <h2>Data Science-based ASCII Art Generator</h2>
+      <!-- Placeholder for explanation about the Data Science approach -->
+      <p>
+        <!-- Describe the process: 
+             E.g., "In this section, we leverage Principal Component Analysis (PCA) 
+             to identify patterns in font characters for ASCII art generation..." -->
+      </p>
+
+      <div class="gallery">
+    <figure style="display: inline-block; width: 100%;">
+  <img src="ds/test.png" alt="Original Image" style="vertical-align: middle;">
+  <figcaption style="display: inline;">Original Image</figcaption>
+</figure>
+
+   
+
+        <figure>
+          <img src="ds/outputCALpca3.png" alt="Calibri PCA 3 ASCII Art">
+          <figcaption>Calibri PCA 3</figcaption>
+        </figure>
+
+        <figure>
+          <img src="ds/outputCALpca5.png" alt="Calibri PCA 5 ASCII Art">
+          <figcaption>Calibri PCA 5</figcaption>
+        </figure>
+
+        <figure>
+          <img src="ds/outputCALpca7.png" alt="Calibri PCA 7 ASCII Art">
+          <figcaption>Calibri PCA 7</figcaption>
+        </figure>
+
+        <!-- Download link for Calibri PCA -->
+        <figure>
+          <a class="download-link" href="ds/mainCAL.ipynb" download>Download Code (PCA ASCII Calibri Font)</a>
+          <p>this is art code, and outputs created for calibri font, and it oytputs for all the pca values, 3,5,7, and the text files are also saved in the ds folder, their output is very bad, </p>
+        </figure>
+
+        <figure>
+          <img src="ds/outputROMANpca3.png" alt="Roman PCA 3 ASCII Art">
+          <figcaption>Roman PCA 3</figcaption>
+        </figure>
+
+        <figure>
+          <img src="ds/outputROMANpca5.png" alt="Roman PCA 5 ASCII Art">
+          <figcaption>Roman PCA 5</figcaption>
+        </figure>
+
+        <figure>
+          <img src="ds/outputROMANpca7.png" alt="Roman PCA 7 ASCII Art">
+          <figcaption>Roman PCA 7</figcaption>
+        </figure>
+
+        <!-- Download link for Roman PCA -->
+        <figure>
+          <a class="download-link" href="ds/mainROMAN.ipynb" download>Download Code (PCA ASCII Roman Font)</a>
+         <p>this is ascii art code, and outputs created for times new roman font, and it oytputs for all the pca values, 3,5,7, and the text files are also saved in the ds folder, their output is better compared to the calibri font, but bad comopared to the normal 10 level and 70 levels of ascii,</p>
+        </figure>
+      </div>
+    </section>
+
+<!-- Movie ASCII Art Generator Section -->
+<section class="section">
+  <h2>Movie ASCII Art Generator</h2>
+  <p>Experience the transformation of video frames into ASCII art in real-time, complete with embedded audio.</p>
+
+  <div class="video-container">
+    <figure>
+      <video controls width="800">
+        <source src="video/test.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Real Video</figcaption>
+
+    </figure>
+  </div>
+
+  <div class="video-container">
+    <figure>
+      <video controls width="800">
+        <source src="video/ascii_final_with_audio10R.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>ASCII Movie Art</figcaption>
+      <a class="download-link" href="video/movie2.ipynb" download>Download Code (Movie ASCII)</a>
+     <p>this is the code and output of the 10 levels of gray ascii art video, the column  ascii charecter here are 160(2*80) and the number of rows are adjusted with the aspect ratio,, and for this i extracted the black and white frames form the video, the total  extracted frames folder is close to 8  gb in size as it is toally raw and in .npy format, for that reason i dont include the frames folder on the output, and only the ascii frames and the entire final video only.</p>
+    </figure>
+  </div>
+
+  <div class="video-container">
+    <figure>
+      <video controls width="800">
+        <source src="video/ascii_final_with_audio70R.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>ASCII Movie Art</figcaption>
+      <a class="download-link" href="video/movie3.ipynb" download>Download Code (Movie ASCII)</a>
+      <p>this is the code and output of the 70 levels of gray ascii art video, the column  ascii charecter here are 160(2*80) and the number of rows are adjusted with the aspect ratio. i avoided the 80 column version as it looked very basic,</p>
+    </figure>
+  </div>
+
+  <div class="video-container">
+    <figure>
+      <video controls width="800">
+        <source src="video/ascii_with_audioR.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>ASCII Movie Art</figcaption>
+      <a class="download-link" href="video/video.ipynb" download>Download Code (Movie ASCII)</a>
+      <p>this is the pca verision of ascii art movie, fot it i tried with the best pca version i  get in the second portion of the question, i have thake the roman font and pca value 5, and it has 80 column charecters,this code taken 10 hours to run, thats also the chatgpt optimized version, unoptimezed version takes close to that time for only 20 second clips.(its frame files has some issue,as i have run other code and dont change the directory name after getting this output,and it is impossible for me to rerun this code, so the folder has >10k fils, 3.5 for the text files, 3.5 for the image frames, and 3.5 for the other code output stored on that directory.) </p>
+    </figure>
+  </div>
+
+  <div class="video-container">
+    <figure>
+      <video controls width="800">
+        <source src="video/ascii_final_with_audioBestR.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>ASCII Movie Art</figcaption>
+      <a class="download-link" href="video/movie_main.ipynb" download>Download Code (Movie ASCII)</a>
+            <p>this is the second best video output i have produced, the column  ascii charecter here are 240(3*80) and the number of rows are adjusted with the aspect ratio, and for this i extracted the black and white form the video, the total  extracted frames folder is close to 8  gb in size as it is toally raw and in .npy format, for that reason i dont include the frames folder on the output, and only the ascii frames and the entire final video only.</p>
+    </figure>
+  </div>
+
+  <div class="video-container">
+    <figure>
+      <video controls width="800">
+        <source src="video/ascii_colored_finalR.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>ASCII Movie Art</figcaption>
+      <a class="download-link" href="video/movieMainMain.ipynb" download>Download Code (Movie ASCII)</a>
+      <p>this is the best video output i have produced, the column  ascii charecter here are 320, and for this i extracted the colour frames form the video, the total  extracted colours_frames  folder is 22  gb in size as it is toally raw and in .npy format, for that reason i dont include the colour_frames folder on the output,  and only the ascii frames and the entire final video only. </p>
+    </figure>
+  </div>
+</section>
+
+
+  <!-- Challenges Faced Section -->
+    <section class="section">
+      <h2>Challenges Faced</h2>
+      <p>
+        The development of ASCII art required overcoming multiple challenges:
+      </p>
+      <ul>
+        <li><strong>Image Preprocessing:</strong> Ensuring that resizing does not distort the aspect ratio significantly.</li>
+        <li><strong>Character Mapping:</strong> Finding the best character set to represent different intensity levels.</li>
+        <li><strong>Computational Complexity:</strong> Handling large image and video files efficiently.</li>
+        <li><strong>Storage:</strong> Managing the large dataset of frames and intermediate outputs.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ASCII Art Showcase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
