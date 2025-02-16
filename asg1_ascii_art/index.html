@@ -19,7 +19,8 @@
 				<a href="#asg1" class="a1">1st</a> | 
 				<a href="#asg2" class="a1">2nd</a> |
 				<a href="#asg3" class="a1">3rd</a> |
-        <a href="#chlg" class="a1">Challenges</a>
+        <a href="#chlg" class="a1">Challenges</a> |
+        <a href="#color" class="a1">Color Video</a>
 			</nav>
 		</header>
 
@@ -1713,6 +1714,55 @@ sèāăĵā|                /^³¶"""\áà¡*ĵ\||\  :| |||  ¯¯¶°Ĩ     á
                 made the details less distinguishable. The 240-pixel width provided the best clarity while keeping the output readable. Choosing the right font (Arial 
                 vs. Times New Roman) also led to minor differences in character mapping but did not drastically affect the overall quality, making it less significant 
                 compared to other parameters.
+              </p>
+              <p class="p1"><a href="#TOP">goto top ^</a></p>
+            </section>
+          </article>
+          <article class="rmIta">
+			    	<section class="sec2">
+			    		<a name="color"></a>
+			    		<h2>Attempting to Create Colored ASCII Video</h2>
+              <p>
+                To generate a colored ASCII video, I initially tried a method where each frame was split into its Red (R), Green (G), and Blue (B) channels. Each 
+                channel was then converted into a separate ASCII image, and finally, the three ASCII images were recombined to form a colored ASCII frame. However, 
+                this approach did not produce good results. The main issue was that ASCII characters primarily represent intensity variations, not color information. 
+                When splitting the frame into RGB channels, each channel lost crucial structural details since ASCII art is best suited for grayscale intensity mapping. 
+                Moreover, recombining separate ASCII representations for R, G, and B channels led to misalignment issues, making the final image appear noisy and 
+                fragmented instead of a coherent colored ASCII frame.
+              </p>
+              <div class="video-container">
+                <div class="video-comp">
+                    <video controls preload="auto">
+                        <source src="ascii_color_video/bleach_lr.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="caption">Original Video</div>
+                </div>
+                <div class="video-comp">
+                  <video controls preload="auto">
+                    <source src="ascii_color_video/RGB_color70_final_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="caption">Best Result: Color Output (new width 240; Grey Level 70)</div>
+                </div>
+              </div>
+              <p>
+                To improve the output, I switched to a different method. Instead of splitting the frame into RGB channels, I calculated the average color of each patch 
+                and assigned that color to the corresponding ASCII character. This approach ensured that each ASCII character retained both its structural integrity and 
+                the color representation of the original frame. Since my original video had a black background, I maintained a black background in the ASCII video and 
+                reversed grey level 70 (" .'‘’^\",:;Il!i<>~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$") for better contrast, ensuring that darker 
+                characters appeared lighter and vice versa.
+              </p>
+              <p>
+                However, this method also came with challenges. Since ASCII characters have different densities, a character like ' @ ' covers more space visually than a 
+                character like ' . '. Mapping colors onto ASCII characters while maintaining the correct perceived brightness was difficult. Some ASCII characters looked 
+                too bright or too dark compared to their surrounding patches, creating inconsistencies in the output. Additionally, handling color interpolation and 
+                smoothing the transitions between patches required extra processing, making the colored ASCII generation slower than grayscale ASCII conversion.
+              </p>
+              <p>
+                Despite these challenges, averaging the patch color and applying it to ASCII characters provided a much better result than the RGB channel-splitting 
+                approach, as it maintained both color and structural detail without excessive distortion. Reversing grey level 70 further enhanced visibility, making 
+                the ASCII video more recognizable and visually appealing.
               </p>
               <p class="p1"><a href="#TOP">goto top ^</a></p>
             </section>
