@@ -1,0 +1,207 @@
+/* 
+  Example Colorful Stylesheet 
+  (Place this in a file named 'styles.css')
+*/
+
+/* Import a Google Font (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #FCEFEF, #E4FBFF);
+}
+
+/* Containers and Sections */
+.content, .container, .section {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Headings (using a playful, colorful palette) */
+h1 {
+    color: #4fe362;  /*  */
+    margin-top: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #72C6C0;  /* Teal shade */
+    margin-top: 0;
+}
+
+h3 {
+    color: #FF6363;  /* Soft Red/Coral */
+    margin-top: 0;
+}
+
+/* Paragraphs, Lists, etc. */
+p, ul, ol {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Highlight block (e.g., .question or .note) */
+.question {
+    background-color: #FFF6E8;
+    padding: 15px;
+    border-left: 6px solid #FFD572; /* Warm yellow */
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.image-container img {
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+table thead tr {
+    background-color: #72C6C0; /* Teal heading */
+    color: #ffffff;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Slight row striping for tables */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Code / Preformatted Blocks */
+pre, code {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+pre {
+    background-color: #3A3AA3;  /* A darker purple/blue for contrast */
+    color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+/* Lists inside code blocks (optional if you want them) */
+pre ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: #FF6363;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Soft gradient section */
+.soft-gradient-section {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: #444; /* Text color for contrast */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Apply a light background image to the entire body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('C:/Users/Admin/Desktop/ACVDL/futuristic-background-with-green-letters.jpg') no-repeat center center fixed; 
+    background-size: cover;  /* Ensures the background image covers the entire page */
+    color: #333;  /* Text color for readability */
+}
+
+/* Main container to wrap content */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);  /* Light semi-transparent white background for readability */
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-container img {
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between videos */
+    flex-wrap: wrap; /* Allows wrapping if the screen is small */
+}
+
+.video-container video {
+    width: 320px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the video fills the frame */
+}
+
+
+
+/* Styling for headings */
+h1, h2, h3 {
+    color: #34cd5a;  /* Color for headings */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Styling for paragraphs */
+p {
+    line-height: 1.6;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment Report - ASCII Art Generation</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main content container -->
+    <div class="container">
+        <h1>Experiment Report - ASCII Art Generation</h1>
+        <h2>Amit Bera</h2>
+        <h2>B2330056</h2>
+        
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>
+                The objective of this experiment is to generate ASCII art from an image. ASCII art involves 
+                representing an image using ASCII characters, where different intensity levels of grayscale 
+                are mapped to specific characters. The experiment follows a structured approach, starting 
+                from image preprocessing to final ASCII conversion.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Methodology</h2>
+            <h3>1. Read an Image & Conversion</h3>
+            <p>
+                The experiment begins by reading the input image and converting it to grayscale image. The grayscale image is used for further processing.
+                <div class="image-container">
+                    <img src="deadpool_org.png" alt="Original Image" class="side-by-side">
+                    <img src="deadpool_grayscale.png" alt="Grayscale Image" class="side-by-side">
+                </div>
+                <div class="image-container">
+                    <img src="wolverine_org.png" alt="Original Image" class="side-by-side">
+                    <img src="wolverine_gray.png" alt="Grayscale Image" class="side-by-side">
+                </div>
+            </p>
+            
+            <h3>2. Resizing While Maintaining Aspect Ratio</h3>
+            <p>
+                The number of columns is set to 80, and the corresponding number of rows is computed using the original aspect ratio.
+            </p>
+            
+            <h3>3. Grid Division for ASCII Mapping</h3>
+            <p>
+                The image is divided into a grid of tiles, where each tile corresponds to a block of pixels. The average intensity of each tile is calculated and mapped to an ASCII character based on predefined intensity levels.
+            </p>
+
+            <h3>4. ASCII Character Mapping</h3>
+            <p>
+                The average intensity of each tile is mapped to an ASCII character. Two sets of ASCII characters are used: one with 10 levels of intensity and another with 70 levels of intensity. The resulting ASCII art is saved as both text files and images.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Results</h2>
+            <h3>1. ASCII Art with 10 Levels of Intensity</h3>
+            <p>
+                The ASCII art generated using 10 levels of intensity is saved as a text file and an image.
+                The characters used are: "@%#*+=-:. ".
+                <div class="image-container">
+                    <img src="output_image/deadpool_10_level.png" alt="ASCII Art with 10 Levels of Intensity">
+                    <img src="output_image/wolverine_10_level.png" alt="ASCII Art with 10 Levels of Intensity">
+                </div>
+                
+            </p>
+            
+
+            <h3>2. ASCII Art with 70 Levels of Intensity</h3>
+            <p>
+                The ASCII art generated using 70 levels of intensity is saved as a text file and an image.
+                The characters used are: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^‘’. ".
+                <div class="image-container">
+                    <img src="output_image/deadpool_70_level.png" alt="ASCII Art with 70 Levels of Intensity">
+                    <img src="output_image/wolverine_70_level.png" alt="ASCII Art with 70 Levels of Intensity">
+                </div>
+            </p>
+            
+            <h3>3. PCA-based ASCII Art Generation</h3>
+            <p>
+                PCA (Principal Component Analysis) is applied to the image to generate ASCII art. The PCA results are saved as CSV files for different values of k (3, 5, 7).
+                The ASCII art is generated based on the PCA results and saved as text files and images.
+                <div class="image-container">
+                    <img src="output_image/deadpool_pca_k3.png" title="k=3" class="side-by-side">
+                    <img src="output_image/deadpool_pca_k5.png" title="k=5" class="side-by-side">
+                    <img src="output_image/deadpool_pca_k7.png" title="k=7" class="side-by-side">
+                    
+                </div>
+                <div class="image-container">
+                    <img src="output_image/wolverine_pca_k3.png" title="k=3" class="side-by-side">
+                    <img src="output_image/wolverine_pca_k5.png" title="k=5" class="side-by-side">
+                    <img src="output_image/wolverine_pca_k7.png" title="k=7" class="side-by-side">
+                    
+                </div>
+            </p>
+           
+            <h3>4. Movie ASCII Art Generator</h3>
+            <p>
+                The ASCII art is generated based on the 10 levels and 70 levels of intensity results and saved as images then all together converted to video.
+                <div class="video-container">
+                    <video src="data/sample_vid.mp4" title="data" class="up-down" controls></video>
+                    <video src="output_video/sample_vid_ascii_level10.mp4" title="10-Level" class="up-down" controls></video>
+                    <video src="output_video/sample_vid_ascii_level70.mp4" title="70-Level" class="up-down" controls></video>
+                    <video src="data/sample_vid2.mp4" title="data" class="up-down" controls></video>
+                    <video src="output_video/sample_vid2_ascii_level10.mp4" title="10-Level" class="up-down" controls></video>
+                    <video src="output_video/sample_vid2_ascii_level70.mp4" title="70-Level" class="up-down" controls></video>
+                    <video src="data/sample_vid1.mp4" title="data" class="up-down" controls></video>
+                    <video src="output_video/sample_vid1_ascii_level10.mp4" title="10-Level" class="up-down" controls></video>
+                    <video src="output_video/sample_vid1_ascii_level70.mp4" title="70-Level" class="up-down" controls></video>
+                </div>
+            </p>
+
+        </div>
+
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>
+                The experiment successfully generated ASCII art from an image using different methods. The results demonstrate the effectiveness of using different levels of intensity and PCA for ASCII art generation. The generated ASCII art can be used for various applications, including artistic representations and data visualization.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
